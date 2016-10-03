@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neigborhood Map</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        height: 100%;
+        position: relative;
+      }
+      
+      #map {
+        height: 100%;
+      }
+
+      #floating-panel {
+        position: absolute;
+        top: 0px;
+        right: 80%;
+        z-index: 5;
+       
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: left;
+        font-family: 'sans-serif';
+        line-height: 20px;
+        padding-left: 10px;
+      }
+
+      .displayMenu{
+    display: inline-block;
+    width: 420px
+}
+
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<br>
+<div class= 'container'>
+ 
+  <div id='floating-panel' class="">
+  	 <div class="input-group">
+      <input id="search" type="text" class="form-control" placeholder="Search for...">
+    </div><!-- /input-group -->
+    <div id='options'></div>
+  </div>
+   <div id='map'>
+    </div>
+  
+</div>    
+     <script src='js/maps.js'>
+     
+      </script>
+    <!--Load the APIs-->
+    <script async defer
+     src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDDWDn0kAdtzOoQW5FFu11-yigYDPDXBwo&callback=initMap">
+    </script>
+</body>
+</html>
